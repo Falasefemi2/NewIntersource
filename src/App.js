@@ -1,8 +1,24 @@
 import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Home from "./pages/Home"
+import AboutUs from './pages/AboutUs'
+import JobsFeed from './pages/JobsFeed'
+import WorkingInCanada from './pages/WorkingInCanada'
+import ContactUs from './pages/ContactUs'
+
+
 
 const App = () => {
   return (
-    <div>App</div>
+    <Router>
+      <Routes>
+        <Route path='/' element={<Home />} />
+      <Route path='/about' element={<AboutUs />} />
+      <Route path='/jobfeed' element={<JobsFeed />} />
+      <Route path='/work' element={<WorkingInCanada />} />
+      <Route path='/contact' element={<ContactUs />} />
+      </Routes>
+    </Router>
   )
 }
 

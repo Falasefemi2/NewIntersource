@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100;0,200;0,300;1,100;1,200&family=Joan&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,800;1,300;1,400;1,500;1,700&family=Oswald:wght@200;300;400;500;700&family=Radio+Canada:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --body: #F2F1F5;
+  --blue: #3480F1;
+  --white: #ffffff;
+  --black: #000000;
+  --linear-gradient:  rgba(0, 0, 0, 0.81), rgb(250, 249, 249);
+  --linear-gradient2: rgba(0, 0, 0, 0.81), rgb(250, 249, 249);
+  --linear-gradient3: linear-gradient(-255deg, #102544 0%,   #1965D5 59.38%);
+  --sub-btn: #102544;
+  --paragraph-color: rgba(216, 216, 216, 1)
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--body);
+    margin: 0;
+}
+
+.navbar{
+  padding: 1.2rem;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, .1);
+  background: white;
+  font-family: 'Dm sans';
+  margin: 5px;
+  width: 100%;
+  overflow-y: hidden !important;
+}
+.navbar .mx-auto li a:hover{
+  background-color: #3480F1;
+  color: white !important;
+  border-radius: 5px;
+}
+.sign-btn li{
+  margin-right: 20px;
+  /* background-color: red !important; */
+}
+.btn1 {
+  padding: .85rem 4rem !important;
+  color: #fff !important;
+  background-color: #3480F1;
+  outline: none !important;
+  border: none !important;
+  border-radius: 5px;
+  text-decoration: none; 
+}
+.btn1:hover {
+  padding: .85rem 4rem !important;
+  color:  #3480F1 !important;
+  background-color: #fff !important;
+  border: 1px solid #3480F1 !important;
+  border-radius: 5px;
+  text-decoration: none;
+  
+}
+.signup-btn:hover, .signin-btn:hover{
+  padding: .85rem 4rem !important;
+  color:  #3480F1 !important;
+  background-color: #fff !important;
+  border: 1px solid #3480F1 !important;
+  border-radius: 5px;
+  text-decoration: none; 
+}
+.btn2 {
+  padding: .85rem 4rem !important;
+  background-color: white;
+  color: #3480F1 !important;
+  outline: none !important;
+  border: 1px solid #3480F1;
+  border-radius: 5px;
+  text-decoration: none;
+} 
+.btn2:hover {
+  padding: .85rem 4rem !important;
+  color: #fff !important;
+  background-color:#3480F1 !important;
+  border: 1px solid #3480F1 !important;
+  border-radius: 5px;
+  text-decoration: none;
+  
+} 
