@@ -10,15 +10,15 @@ import ContactUs from './pages/ContactUs'
 
 const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path='/' element={<Home />} />
-      <Route path='/about' element={<AboutUs />} />
-      <Route path='/jobfeed' element={<JobsFeed />} />
-      <Route path='/work' element={<WorkingInCanada />} />
-      <Route path='/contact' element={<ContactUs />} />
-      </Routes>
-    </Router>
+      <Router>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<AboutUs />} />
+          <Route path='/jobfeed' element={<JobsFeed />} />
+          <Route path='/work' element={<WorkingInCanada />} />
+          <Route path='/contact' element={<ContactUs />} />
+        </Routes>
+      </Router>
   )
 }
 
