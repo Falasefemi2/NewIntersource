@@ -5,6 +5,7 @@ import AboutUs from './pages/AboutUs'
 import JobsFeed from './pages/JobsFeed'
 import WorkingInCanada from './pages/WorkingInCanada'
 import ContactUs from './pages/ContactUs'
+import SignUp from './pages/SignUp'
 
 
 
@@ -17,6 +18,7 @@ const App = () => {
           <Route path='/jobfeed' element={<JobsFeed />} />
           <Route path='/work' element={<WorkingInCanada />} />
           <Route path='/contact' element={<ContactUs />} />
+          <Route path='/signup' element={<SignUp />} />
         </Routes>
       </Router>
   )

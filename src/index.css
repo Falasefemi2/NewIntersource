@@ -21,6 +21,39 @@
   box-sizing: border-box;
 }
 
+.why-header {
+    font-weight: 800;
+    font-family: 'Montserrat';
+    background-image: var(--linear-gradient3);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 2rem;
+}
+
+.why-section {
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.card-body {
+    padding-top: 70px !important;
+}
+
+.card-title {
+    color: #102544;
+    font-family: 'Montserrat';
+    font-weight: 600;
+}
+
+.text-R {
+    padding-top: 7rem;
+    margin-bottom: 20px;
+}
+
 
 a {
   text-decoration: none !important;
@@ -46,6 +79,7 @@ a {
 .navbar{
   box-shadow: 0 12px 20px rgba(0, 0, 0, .1);
   background: white;
+  margin: 0;
 }
 .navbar ul li a{
   margin: 5px;

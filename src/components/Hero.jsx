@@ -19,7 +19,7 @@ const Hero = () => {
               advanced methodologies that strive and recruit qualified
               candidates that meet the staffing need of companies.
             </p>
-            <button class="hero-btn" type="submit">
+            <button className="hero-btn" type="submit">
               <a href="/" className="a-color">Upload Cv</a>
             </button>
           </div>

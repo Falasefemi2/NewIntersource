@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Button = ({text, className}) => {
   return (
     <>
     <li>
-        <a href="/" className={`nav-link ${className}`}>{text}</a>
+        <Link to="/signup" className={`nav-link ${className}`}>{text}</Link>
     </li>
     </>
   )
