@@ -1,6 +1,6 @@
 import React from 'react'
 
-const WhySectionImg = ({bigText,headText, bodyText, img, reverse}) => {
+const WhySectionImg = ({bigText,headText,bodyText,img,reverse}) => {
   return (
     <div className='container text-dark'>
         <div className={`row ${reverse}`}>

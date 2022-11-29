@@ -54,6 +54,27 @@
     margin-bottom: 20px;
 }
 
+.choose-section {
+    min-height: 80vh;
+    background-color: var(--blue);
+}
+
+.choose-header {
+    color: var(--white);
+    font-weight: 800;
+}
+
+.choose-sub-header {
+    color: var(--white);
+    font-family: 'Montserrat';
+    font-weight: 600;
+}
+
+.p2 {
+    color: #d8d8d8;
+    font-family: '"Dm sans", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif';
+}
+
 
 a {
   text-decoration: none !important;
