@@ -65,7 +65,7 @@
 }
 
 .choose-sub-header {
-    color: var(--white);
+    color:var(--white);
     font-family: 'Montserrat';
     font-weight: 600;
 }
@@ -73,6 +73,31 @@
 .p2 {
     color: #d8d8d8;
     font-family: '"Dm sans", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif';
+}
+
+.labour-section {
+    min-height: 100vh;
+}
+
+.round {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.labour-header {
+     color: #102544;
+     font-family: 'Montserrat';
+     font-weight: 800;
+}
+
+.imgz {
+    display: block;
+    flex-basis: 20%;
+    padding: 10px;
 }
 
 
@@ -361,10 +386,11 @@ section {
     .range-section{
         min-height: 100vh;
     }
+    
     .range-header{
         font-family: 'Montserrat';
         font-weight: 800;
-        color: var(--black);
+        color: #102544;
     }
     
     .range-img{
