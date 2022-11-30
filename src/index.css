@@ -54,6 +54,12 @@ body {
     font-weight: 600;
 }
 
+.card-title1 {
+    color: white;
+    font-family: 'Montserrat';
+}
+
+
 .text-R {
     padding-top: 7rem;
     margin-bottom: 20px;
@@ -102,6 +108,36 @@ body {
 .p3 {
     color: var(--white);
     font-family: 'Dm sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.quote-section, .card {
+    min-height: 40vh !important;
+    background-color: var(--blue) !important;
+}
+
+.quote1 {
+    display: block;
+    align-items: center;
+}
+
+.p4 {
+    color: white;
+    font-family: 'Dm sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card-text {
+    font-family: 'Dm sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    color: #585858;
+}
+
+.req-btn {
+    padding: .85rem 4rem !important;
+    background-color: white;
+    color: #3480F1 !important;
+    outline: none !important;
+    border: 1px solid #3480F1;
+    border-radius: 5px;
+    text-decoration: none;
 }
 
 
