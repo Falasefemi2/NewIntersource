@@ -88,6 +88,19 @@
     justify-content: center;
 }
 
+.range-header{
+    font-family: 'Montserrat';
+    font-weight: 800;
+    color: #102544;
+}
+
+.p3 {
+    color: var(--white);
+    font-family: 'Dm sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
 .labour-header {
      color: #102544;
      font-family: 'Montserrat';
@@ -198,6 +211,8 @@ section {
   z-index: 2;
 }
 
+
+
 .home {
   width: 100%;
   background-image: url(./imgs1/img1.png);
@@ -219,6 +234,14 @@ section {
   height: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0.075), rgba(250, 249, 249, 0.151));
   z-index: 1;
+}
+
+.box{
+    width: 250px;
+    margin: 0px 0px;
+    box-shadow: 0 0 20px 2px rgba(0, 0, 0, .1);
+    transition: .85s;
+    position: relative;
 }
 
 .home-header {
@@ -244,6 +267,23 @@ section {
   font-family: 'Dm sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
 }
 
+.bottom-text{
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    color: white;
+}
+.box img{
+    display: block;
+    width: 100%;
+    margin: 5px;
+    /* border-radius: 5px; */
+}
+.box:hover{
+    transform: scale(1.2);
+    z-index: 2;
+}
+
 
 .hero-btn{
   padding: .85rem 4rem !important;
@@ -252,6 +292,16 @@ section {
   border: none;
   background-color: #3480F1;
   color: white !important;
+}
+
+.range-img{
+    width: 90%;
+    padding: 5px;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -713,7 +763,6 @@ input[type=number]::-webkit-outer-spin-button {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {}
-
 
 
 
