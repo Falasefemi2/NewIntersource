@@ -681,6 +681,142 @@ section {
     border: 1px solid #3480F1 !important;
 }
 
+.employment-header{
+    font-weight: 800;
+    font-family: 'Montserrat';
+    background-image: var(--linear-gradient3);
+    background-size: 70% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+.card-title2{
+    margin-bottom: 2px;
+}
+.canada-header{
+    font-family: 'Montserrat';
+    font-weight: 600;
+    color: #102544;
+}
+.card-text{
+    font-family: 'Dm sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #585858;
+}
+.layoffs-section{
+    min-height: -2px;
+}
+.jobs-section{
+    margin-top: 10px;
+    min-height: 7vh;
+}
+.textarea1,
+    input[type=text] {
+    border: 1px solid #3480F1 !important;
+    background-color: #F2F1F5;
+}
+select{
+    margin: 5px !important;
+    padding: 10px;
+    padding-right: 2rem !important;
+    border: none;
+    border: 5px;
+}
+
+textarea{
+    border: 1px solid #3480F1;
+    border-radius: 5px;
+    background-color: #F2F1F5 !important;
+    resize: none;
+}
+/* .textarea1{
+    border: 1px solid #000000 !important;
+} */
+.form-control-1, .form-control-2, .form-control3, .form-control-4{
+    height: 50px;
+}
+.form-control-1::placeholder{
+    color: rgb(3, 3, 51) !important;
+}
+.form-control-2::placeholder{
+    color: rgb(3, 3, 51) !important;
+}
+.form-selection{
+    height: 50px;
+    border-radius: 5px;
+    background-color: #d9d9d9;
+}
+.hear{
+    border: 1px solid #3480F1;
+    border-radius: 5px;
+    padding-left: 1.2rem;
+}
+.twit-active{
+    background-color: #3480F1;
+}
+ hr{
+    color: black;
+    margin-top: 10px;
+    width: 100%;
+} 
+
+.contacts{
+    min-height: 100vh;
+    color: black;
+}
+.upload-header{
+    padding-top: 40px;
+    padding-left: 7rem;
+    color: black;
+    font-family: 'Montserrat';
+    font-weight: 600;
+}
+
+.jobs-card-section{
+    min-height: 100vh;
+    /* background-color: red; */
+}
+.jobs-btn{
+    padding: .85rem 3rem !important;
+    border-radius: 5px;
+    margin-left: 10px;
+    border: none;
+    background-color: #3480F1;
+    color: white !important;
+    cursor: pointer;
+}
+.jobs-btn:hover{
+    background: white !important;
+    color: #3480F1 !important; 
+    cursor: pointer;
+}
+
+textarea{
+    border: 1px solid #3480F1;
+    border-radius: 5px;
+    background-color: #F2F1F5 !important;
+    resize: none;
+}
+/* .textarea1{
+    border: 1px solid #000000 !important;
+} */
+.form-control-1, .form-control-2, .form-control3, .form-control-4{
+    height: 50px;
+}
+.form-control-1::placeholder{
+    color: rgb(3, 3, 51) !important;
+}
+.form-control-2::placeholder{
+    color: rgb(3, 3, 51) !important;
+}
+.form-selection{
+    height: 50px;
+    border-radius: 5px;
+    background-color: #d9d9d9;
+}
+
+
+
 
 
 

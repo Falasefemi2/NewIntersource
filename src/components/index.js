@@ -14,6 +14,7 @@ import Objective from "./Objective";
 import Recruitment from "./Recruitment";
 import Staff from "./Staff";
 import Contain from "./Contain";
+import FormSelection from "./FormSelection";
 
 export {
     Navbar,
@@ -31,5 +32,6 @@ export {
     Objective,
     Recruitment,
     Staff,
-    Contain
+    Contain,
+    FormSelection
 }

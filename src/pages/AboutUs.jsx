@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, AboutIntersource, WhoSection, Objective, Recruitment, Staff } from "../components";
+import { Navbar, AboutIntersource, WhoSection, Objective, Recruitment, Staff, QuoteSection, FooterSection } from "../components";
 
 const AboutUs = () => {
   return (
@@ -22,6 +22,8 @@ const AboutUs = () => {
       <Objective />
       <Recruitment />
       <Staff />
+      <QuoteSection />
+      <FooterSection />
     </>
   );
 };
