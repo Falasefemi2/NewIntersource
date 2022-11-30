@@ -1,7 +1,7 @@
 import React from 'react'
 import { Navbar } from '../components'
 
-const SignIn = () => {
+const UpLoadCv = () => {
   return (
     <>
     <Navbar />
@@ -9,4 +9,4 @@ const SignIn = () => {
   )
 }
 
-export default SignIn
+export default UpLoadCv

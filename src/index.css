@@ -21,6 +21,10 @@
   box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 body {
     font-family: "montserrat" ,sans-serif !important;
     background-color: var(--body) !important;
@@ -35,6 +39,10 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-top: 2rem;
+}
+
+li {
+    list-style-type: none;
 }
 
 .why-section {
