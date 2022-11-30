@@ -8,6 +8,8 @@ import RangeSection from "./RangeSection"
 import PartnerSection from "./PartnerSection";
 import QuoteSection from "./QuoteSection";
 import FooterSection from "./FooterSection";
+import AboutIntersource from "./AboutIntersource";
+import WhoSection from "./WhoSection";
 
 export {
     Navbar,
@@ -19,5 +21,7 @@ export {
     RangeSection,
     PartnerSection,
     QuoteSection,
-    FooterSection
+    FooterSection,
+    AboutIntersource,
+    WhoSection
 }
