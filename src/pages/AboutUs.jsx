@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, AboutIntersource, WhoSection } from "../components";
+import { Navbar, AboutIntersource, WhoSection, Objective, Recruitment, Staff } from "../components";
 
 const AboutUs = () => {
   return (
@@ -19,6 +19,9 @@ const AboutUs = () => {
       </section>
       <WhoSection />
       <AboutIntersource />
+      <Objective />
+      <Recruitment />
+      <Staff />
     </>
   );
 };

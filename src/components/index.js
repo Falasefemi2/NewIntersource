@@ -10,6 +10,10 @@ import QuoteSection from "./QuoteSection";
 import FooterSection from "./FooterSection";
 import AboutIntersource from "./AboutIntersource";
 import WhoSection from "./WhoSection";
+import Objective from "./Objective";
+import Recruitment from "./Recruitment";
+import Staff from "./Staff";
+import Contain from "./Contain";
 
 export {
     Navbar,
@@ -23,5 +27,9 @@ export {
     QuoteSection,
     FooterSection,
     AboutIntersource,
-    WhoSection
+    WhoSection,
+    Objective,
+    Recruitment,
+    Staff,
+    Contain
 }
