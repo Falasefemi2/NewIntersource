@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar, Hero, WhySection, ChooseSection, LabourSection, RangeSection } from '../components'
+import { Navbar, Hero, WhySection, ChooseSection, LabourSection, RangeSection, PartnerSection } from '../components'
 
 const Home = () => {
   return (
@@ -10,6 +10,7 @@ const Home = () => {
     <ChooseSection />
     <LabourSection />
     <RangeSection />
+    <PartnerSection />
     </>
   )
 }

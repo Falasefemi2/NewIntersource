@@ -21,6 +21,11 @@
   box-sizing: border-box;
 }
 
+body {
+    font-family: "montserrat" ,sans-serif !important;
+    background-color: var(--body) !important;
+}
+
 .why-header {
     font-weight: 800;
     font-family: 'Montserrat';
@@ -282,6 +287,12 @@ section {
 .box:hover{
     transform: scale(1.2);
     z-index: 2;
+}
+
+.partner-header {
+    color: #102544;
+    font-weight: 600;
+    font-family: "Dm sans";
 }
 
 
