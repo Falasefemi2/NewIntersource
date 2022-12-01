@@ -729,6 +729,81 @@ textarea{
     background-color: #F2F1F5 !important;
     resize: none;
 }
+
+.works{
+    width: 100%;
+    background-image: url(./imgs1/bg3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.works-section{
+    min-height: 100vh;
+}
+.works-header{
+    font-size: 7rem;
+    font-family: 'Montserrat';
+    font-weight: 800;
+    padding-top: 10rem;
+    line-height: 1.2;
+}
+
+.about-main-section{
+    min-height: 70vh;
+}
+.about-main-body{
+    padding-top: 3rem;
+}
+.about-main-header{
+    font-weight: 800;
+    font-family: 'Montserrat';
+    background-image: var(--linear-gradient3);
+    background-size: 70% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1.2rem;
+}
+
+.topnav {
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 10px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add an active class to highlight the current page */
+  .topnav a.active {
+    color: #3480F1;
+  }
+  
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
+    display: none;
+  }
+
+/* .works{
+    width: 100%;
+    background-image: url(../imgs1/bg3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
 /* .textarea1{
     border: 1px solid #000000 !important;
 } */

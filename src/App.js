@@ -8,14 +8,20 @@ import ContactUs from './pages/ContactUs'
 import SignUp from './pages/SignUp'
 import SignIn from "./pages/SignIn"
 import UpLoadCv from './pages/UpLoadCv'
+import Employment from './pages2/Employment'
+import Layoff from './pages2/Layoff'
+import Health from './pages2/Health'
+import Toolkits from './pages2/Toolkits'
 
 
 
 const App = () => {
+
   return (
       <Router>
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/home' element={<Home />} />
           <Route path='/about' element={<AboutUs />} />
           <Route path='/jobfeed' element={<JobsFeed />} />
           <Route path='/work' element={<WorkingInCanada />} />
@@ -23,6 +29,10 @@ const App = () => {
           <Route path='/signup' element={<SignUp />} />
           <Route path='/signin' element={<SignIn />} />
           <Route path='/uploadcv' element={<UpLoadCv />} />
+          {/* <Route path='/employment' element={<Employment />} />
+          <Route path='/layoff' element={<Layoff />} />
+          <Route path='/health' element={<Health />} />
+          <Route path='/toolkit' element={<Toolkits />} /> */}
         </Routes>
       </Router>
   )
