@@ -21,7 +21,6 @@ const App = () => {
       <Router>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/home' element={<Home />} />
           <Route path='/about' element={<AboutUs />} />
           <Route path='/jobfeed' element={<JobsFeed />} />
           <Route path='/work' element={<WorkingInCanada />} />
@@ -29,10 +28,10 @@ const App = () => {
           <Route path='/signup' element={<SignUp />} />
           <Route path='/signin' element={<SignIn />} />
           <Route path='/uploadcv' element={<UpLoadCv />} />
-          {/* <Route path='/employment' element={<Employment />} />
+          <Route path='/employment' element={<Employment />} />
           <Route path='/layoff' element={<Layoff />} />
           <Route path='/health' element={<Health />} />
-          <Route path='/toolkit' element={<Toolkits />} /> */}
+          <Route path='/toolkit' element={<Toolkits />} />
         </Routes>
       </Router>
   )
