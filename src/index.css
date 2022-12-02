@@ -797,6 +797,28 @@ textarea{
     display: none;
   }
 
+  .works-btn{
+    padding: .85rem 4rem !important;
+    border-radius: 5px;
+    border: none !important;
+    outline: none !important;
+    background-color: #3480F1;
+    color: white !important;  
+}
+.works-btn:hover{
+    background-color: white;
+    color: #3480F1 !important;
+    border: 1px solid #3480F1 !important;
+}
+
+.card-body{
+    padding-top: 70px !important;   
+}
+.card-body1{
+    padding-top: 30px !important;
+    background-color: #F2F1F5;
+}
+
 /* .works{
     width: 100%;
     background-image: url(../imgs1/bg3.png);

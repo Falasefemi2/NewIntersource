@@ -4,7 +4,6 @@ import { FormSelection } from "../components";
 const JobsFeed = () => {
   return (
     <>
-      // removed unnecessary repetition of navbar
       <section className="jobs-section">
         <div className="container text-white">
           <div className="row">

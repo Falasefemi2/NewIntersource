@@ -1,4 +1,8 @@
 import { Routes, Route, NavLink } from "react-router-dom";
+import Employment from "../pages2/Employment";
+import Health from "../pages2/Health";
+import Layoff from "../pages2/Layoff";
+import ToolKit from "../pages2/Toolkits";
 // reordered coderouting to match how it should be rendered
 const AboutMain = () => {
   return (
@@ -17,11 +21,11 @@ const AboutMain = () => {
         <Routes>
           <Route
             path="/employment"
-            element={<>Add your components test 111</>}
+            element={<Employment />}
           />
-          <Route path="/layoff" element={<>Add your components test 222</>} />
-          <Route path="/health" element={<>Add your components test 333</>} />
-          <Route path="/toolkit" element={<>Add your components test 444</>} />
+          <Route path="/layoff" element={<Layoff />} />
+          <Route path="/health" element={<Health />} />
+          <Route path="/toolkit" element={<ToolKit />} />
         </Routes>
       </div>
     </section>

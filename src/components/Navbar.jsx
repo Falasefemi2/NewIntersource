@@ -16,12 +16,12 @@ const Navbar = () => {
           data-bs-toggle="collapse"
           data-bs-target="#navbarNavDropdown"
           aria-controls="navbarNavDropdown"
-          aria-expanded="false"
+          aria-expanded="true"
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNavDropdown">
+        <div className="navbar-collapse collapse" id="navbarNavDropdown">
           <ul className="navbar-nav mx-auto">
             <li className="nav-item">
               <Link to="/" className="nav-link active">

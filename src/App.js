@@ -8,7 +8,7 @@ import ContactUs from "./pages/ContactUs";
 import SignUp from "./pages/SignUp";
 import SignIn from "./pages/SignIn";
 import UpLoadCv from "./pages/UpLoadCv";
-import { Navbar } from "./components";
+import { FooterSection, Navbar, QuoteSection } from "./components";
 
 const App = () => {
   return (
@@ -19,7 +19,6 @@ const App = () => {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/jobfeed" element={<JobsFeed />} />
         <Route path="/work/*" element={<WorkingInCanada />} />
@@ -28,6 +27,10 @@ const App = () => {
         <Route path="/signin" element={<SignIn />} />
         <Route path="/uploadcv" element={<UpLoadCv />} />
       </Routes>
+
+      <QuoteSection />
+
+      <FooterSection />
     </>
   );
 };
