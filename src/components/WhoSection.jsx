@@ -21,13 +21,19 @@ const WhoSection = () => {
             </div>
           </div>
           <div className="col-md-6 cards">
-          <div className="features-icons-item  mb-2 mb-lg-3">
+            <div className="features-icons-item  mb-2 mb-lg-3">
               <div className="features-icons-icon d-flex">
                 <i className="bi bi-boxes mb-2"></i>
               </div>
-              <h3 className="text-capitalize who-header">For Foreign Agencies</h3>
+              <h3 className="text-capitalize who-header">
+                For Foreign Agencies
+              </h3>
               <p className="p7 mb-0">
-              Is the one-stop portal for recruiting for entrepreneurs. The recruiting process may be streamlined by utilizing strong job management technologies, network-based sourcing channels, and a candidate-first approach. This helps businesses hire excellent employees who will progress their goal.
+                Is the one-stop portal for recruiting for entrepreneurs. The
+                recruiting process may be streamlined by utilizing strong job
+                management technologies, network-based sourcing channels, and a
+                candidate-first approach. This helps businesses hire excellent
+                employees who will progress their goal.
               </p>
             </div>
           </div>

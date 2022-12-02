@@ -17,7 +17,9 @@ const QuoteSection = () => {
                   intersource is ready to help you find the workers your company
                   needs!
                 </p>
-                <Link to='/' className="req-btn py-3">Request a quote</Link>
+                <Link to="/" className="req-btn py-3">
+                  Request a quote
+                </Link>
               </div>
             </div>
           </div>

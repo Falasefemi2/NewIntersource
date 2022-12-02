@@ -1,12 +1,18 @@
-import React from 'react'
-import { Navbar } from '../components'
+import React from "react";
+// removed unnecessary repetition of navbar
 
 const ContactUs = () => {
   return (
-    <><Navbar />
-    Contact us
+    <>
+      <div
+        style={{
+          paddingTop: 100,
+        }}
+      >
+        Contact us Page
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default ContactUs
+export default ContactUs;

@@ -34,7 +34,7 @@ const Recruitment = () => {
           </div>
           <div className="col-lg-6 cards">
             <div className="mb-2 mb-lg-3">
-                <img src={circle} className="img-fluid" alt="" />
+              <img src={circle} className="img-fluid" alt="" />
             </div>
           </div>
         </div>

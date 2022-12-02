@@ -50,8 +50,18 @@ const Navbar = () => {
             </li>
           </ul>
           <ul className="navbar-nav me-5">
-            <Button className="btn1" navLink='nav-link' text="Sign Up" links='/signup' />
-            <Button className="btn2" navLink='nav-link' text="Sign In" links='/signin' />
+            <Button
+              className="btn1"
+              navLink="nav-link"
+              text="Sign Up"
+              links="/signup"
+            />
+            <Button
+              className="btn2"
+              navLink="nav-link"
+              text="Sign In"
+              links="/signin"
+            />
           </ul>
         </div>
       </div>

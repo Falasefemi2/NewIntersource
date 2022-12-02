@@ -15,13 +15,19 @@ const Hero = () => {
               <br />
               your team
             </h1>
+
             <p className="p1 col-lg-5 col-sm-12 col-md-12 mr-4">
               At Intersource Global Inc., we apply the most highly developed and
               advanced methodologies that strive and recruit qualified
               candidates that meet the staffing need of companies.
             </p>
-            <Button className="hero-btn a-color" type="submit" text='Upload Cv' links='/uploadcv'>
-            </Button>
+
+            <Button
+              className="hero-btn a-color"
+              type="submit"
+              text="Upload Cv"
+              links="/uploadcv"
+            ></Button>
           </div>
         </div>
       </div>

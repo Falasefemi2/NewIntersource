@@ -59,21 +59,44 @@ const FooterSection = () => {
               <div className="text-center text-md-right">
                 <ul className="list-unstyled list-inline">
                   <li className="list-inline-item">
-                    <a href="https://www.facebook.com/" className="btn-floating btn-sm text-dark">
-                    <i className="fab fa-facebook "></i>
+                    <a
+                      href="https://www.facebook.com/"
+                      className="btn-floating btn-sm text-dark"
+                    >
+                      <i className="fab fa-facebook "></i>
                     </a>
                   </li>
                   <li className="list-inline-item">
-                  <a href="https://instagram.com/" className="btn-floating btn-sm text-dark"><i className="fab fa-instagram"></i></a>
+                    <a
+                      href="https://instagram.com/"
+                      className="btn-floating btn-sm text-dark"
+                    >
+                      <i className="fab fa-instagram"></i>
+                    </a>
                   </li>
                   <li className="list-inline-item">
-                  <a href="https://www.twitter.com" className="btn-floating btn-sm text-dark"><i className="fab fa-twitter"></i></a>
+                    <a
+                      href="https://www.twitter.com"
+                      className="btn-floating btn-sm text-dark"
+                    >
+                      <i className="fab fa-twitter"></i>
+                    </a>
                   </li>
                   <li className="list-inline-item">
-                  <a href="https://www.whatsapp.com" className="btn-floating btn-sm text-dark"><i className="fab fa-whatsapp"></i></a>
+                    <a
+                      href="https://www.whatsapp.com"
+                      className="btn-floating btn-sm text-dark"
+                    >
+                      <i className="fab fa-whatsapp"></i>
+                    </a>
                   </li>
                   <li className="list-inline-item">
-                  <a href="https://www.youtube.com" className="btn-floating btn-sm text-dark"><i className="fab fa-youtube"></i></a>
+                    <a
+                      href="https://www.youtube.com"
+                      className="btn-floating btn-sm text-dark"
+                    >
+                      <i className="fab fa-youtube"></i>
+                    </a>
                   </li>
                 </ul>
               </div>

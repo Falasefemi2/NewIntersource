@@ -1,12 +1,17 @@
-import React from 'react'
-import { Navbar } from '../components'
+import React from "react";
 
 const UpLoadCv = () => {
   return (
     <>
-    <Navbar />
+      <div
+        style={{
+          paddingTop: 100,
+        }}
+      >
+        Upload CV
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default UpLoadCv
+export default UpLoadCv;

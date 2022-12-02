@@ -1,10 +1,10 @@
 import React from "react";
-import { FormSelection, Navbar } from "../components";
+import { FormSelection } from "../components";
 
 const JobsFeed = () => {
   return (
     <>
-      <Navbar />
+      // removed unnecessary repetition of navbar
       <section className="jobs-section">
         <div className="container text-white">
           <div className="row">

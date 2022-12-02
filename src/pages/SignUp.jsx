@@ -1,12 +1,17 @@
-import React from 'react'
-import { Navbar } from '../components'
+import React from "react";
 
 const SignUp = () => {
   return (
     <>
-    <Navbar />
+      <div
+        style={{
+          paddingTop: 100,
+        }}
+      >
+        Sign Up Page
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default SignUp
+export default SignUp;
