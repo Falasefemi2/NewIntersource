@@ -819,6 +819,103 @@ textarea{
     background-color: #F2F1F5;
 }
 
+.contact-header{
+    color: black;
+    font-family: 'Montserrat';
+    font-weight: 800;
+}
+.contact-info{
+    color: #000000;
+    font-family: 'Dm sans';
+}
+
+.contact-header{
+    padding-top: 45px;
+}
+.cont-btn{
+    padding: .85rem 4rem !important;
+    border-radius: 5px;
+    border: none !important;
+    outline: none !important;
+    background-color: #3480F1;
+    color: white !important;
+}
+.cont-btn:hover{
+    background-color: white;
+    color: #3480F1 !important;
+    border: 1px solid #3480F1 !important;
+}
+
+.signup-section{
+    height: 100vh;
+}
+.signup-form{
+    margin-top: 15rem !important;
+}
+
+.custom-controls {
+    padding-left: 10px;
+}
+
+
+.signup-header{
+    font-weight: 600;
+    font-size: 1.2rem;
+    font-family: 'Dm sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.signup-btn{
+    padding: .77rem 0;
+    outline: none !important;
+    border: none !important;
+    background-color: #3480F1;
+    color: white;
+    /* font-family: 'Dm sans'; */
+    font-size: 20px;
+    border-radius: 5px;
+}
+.labels1{
+    font-weight: 600;
+    color: #222222;
+    font-family: 'Dm sans';
+}
+.terms{
+    color: #3480F1;
+}
+.sign-icons{
+    font-weight: 600;
+}
+.sign-icon{
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
+    background-color: #3480F1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.signin-form{
+    margin-top: 15rem !important;
+}
+
+.Fpwd{
+    color: #3480F1;
+}
+
+.labels{
+    color: black;
+}
+.labels2{
+    color: #585858;
+    font-size: 20px;
+}
+
+.hear{
+    border: 1px solid #3480F1;
+    border-radius: 5px;
+    padding-left: 1.2rem;
+}
+
 /* .works{
     width: 100%;
     background-image: url(../imgs1/bg3.png);

@@ -7,6 +7,8 @@ import {
   LabourSection,
   RangeSection,
   PartnerSection,
+  FooterSection,
+  QuoteSection
 } from "../components";
 
 const Home = () => {
@@ -24,6 +26,8 @@ const Home = () => {
       <LabourSection />
       <RangeSection />
       <PartnerSection />
+      <QuoteSection />
+      <FooterSection />
     </>
   );
 };

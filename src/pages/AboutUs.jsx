@@ -4,7 +4,9 @@ import {
   WhoSection,
   Objective,
   Recruitment,
-  Staff
+  Staff,
+  QuoteSection,
+  FooterSection
 } from "../components";
 
 // removed unnecessary repetition of navbar
@@ -33,6 +35,8 @@ const AboutUs = () => {
       <Objective />
       <Recruitment />
       <Staff />
+      <QuoteSection />
+      <FooterSection />
     </>
   );
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import { AboutMain } from "../components";
+import { AboutMain, QuoteSection, FooterSection } from "../components";
 
 const WorkingInCanada = () => {
   return (
@@ -21,6 +21,8 @@ const WorkingInCanada = () => {
         </div>
       </section>
       <AboutMain />
+      <QuoteSection />
+      <FooterSection />
     </>
   );
 };

@@ -8,7 +8,9 @@ import ContactUs from "./pages/ContactUs";
 import SignUp from "./pages/SignUp";
 import SignIn from "./pages/SignIn";
 import UpLoadCv from "./pages/UpLoadCv";
-import { FooterSection, Navbar, QuoteSection } from "./components";
+import { Navbar } from './components';
+import ForgottenPassword from './pages/ForgottenPassword';
+
 
 const App = () => {
   return (
@@ -25,12 +27,9 @@ const App = () => {
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/signin" element={<SignIn />} />
+        <Route path="/forgotpassword" element={<ForgottenPassword />} />
         <Route path="/uploadcv" element={<UpLoadCv />} />
       </Routes>
-
-      <QuoteSection />
-
-      <FooterSection />
     </>
   );
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import { FormSelection } from "../components";
+import { FormSelection, QuoteSection, FooterSection } from "../components";
 
 const JobsFeed = () => {
   return (
@@ -34,6 +34,8 @@ const JobsFeed = () => {
           </div>
         </div>
       </section>
+      <QuoteSection />
+      <FooterSection />
     </>
   );
 };
