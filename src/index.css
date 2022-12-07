@@ -857,6 +857,13 @@ textarea{
     padding-left: 10px;
 }
 
+.personal-info{
+    color: #3480F1;
+    font-size: 30px;
+    font-weight: 600;
+    padding-left: 7rem;
+}
+
 
 .signup-header{
     font-weight: 600;

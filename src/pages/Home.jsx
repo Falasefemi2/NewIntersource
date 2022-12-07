@@ -1,5 +1,4 @@
 import React from 'react'
-import { useNavigate } from "react-router-dom";
 import {
   Hero,
   WhySection,
@@ -12,12 +11,7 @@ import {
 } from "../components";
 
 const Home = () => {
-  // const navigate = useNavigate();
-  // const handlePage = () => {
-  //   navigate("/home");
-  // };
-  // removed unnecessary repetition of navbar
-  // routed properly
+ 
   return (
     <>
       <Hero />

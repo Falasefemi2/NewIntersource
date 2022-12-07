@@ -4,7 +4,6 @@ import Button from "./Button";
 const Hero = () => {
   return (
     <section className="home hero-section">
-      <div className="overlay"></div>
       <div className="container">
         <div className="row">
           <div className="col-12">
@@ -36,3 +35,5 @@ const Hero = () => {
 };
 
 export default Hero;
+
+

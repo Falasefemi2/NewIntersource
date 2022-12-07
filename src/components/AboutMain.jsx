@@ -20,7 +20,7 @@ const AboutMain = () => {
         </div>
         <Routes>
           <Route
-            path="/employment"
+            index="/employment"
             element={<Employment />}
           />
           <Route path="/layoff" element={<Layoff />} />

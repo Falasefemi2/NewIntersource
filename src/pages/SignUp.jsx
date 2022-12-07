@@ -1,50 +1,35 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import { icons } from "../components/icon";
 import signup from "../imgs1/signup-img.png";
 
+
 const SignUp = () => {
-  // States for registration
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
- 
-  // States for checking the errors
-  const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState(false);
- 
-  // Handling the name change
-  const handleName = (e) => {
-    setName(e.target.value);
-    setSubmitted(false);
-    console.log(e.target.value);
-  };
- 
-  // Handling the email change
-  const handleEmail = (e) => {
-    setEmail(e.target.value);
-    setSubmitted(false);
-    console.log(e.target.value);
-  };
- 
-  // Handling the password change
-  const handlePassword = (e) => {
-    setPassword(e.target.value);
-    setSubmitted(false);
-    console.log(e.target.value);
-  };
- 
-  // Handling the form submission
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (name === '' || email === '' || password === '') {
-      setError(true);
-    } else {
-      setSubmitted(true);
-      setError(false);
-    }
-    console.log(e.target.value);
-  };
- 
+  const [email, setEmail] = useState('');
+  const [number, setNumber] = useState('')
+  const [passwordComfirm, setPasswordComfirm] = useState('');
+
+
+
+  async function handleClick() {
+    let item = {username,email,number,password,passwordComfirm}
+    console.warn({username,email,number,password,passwordComfirm});
+
+   let result = await fetch('http://3.99.244.37/api/auth/register', {
+      method: 'POST',
+      headers: {
+        "Content-Type": 'application/json',
+        "Accept": 'application/json'
+      },
+       body:JSON.stringify(item),
+    })
+    result = await result.json()
+    console.warn("result", result);
+  }
+
+
+
  
   return (
     <section className="signup-section">
@@ -53,50 +38,52 @@ const SignUp = () => {
           <div className="col-md-6">
             <img src={signup} alt="" className="img-fluid" />
           </div>
-          <div className="col-md-5 signup-form">
+          <div className="col-md-5 signup-form mt-3">
             <h3 className="text-uppercase signup-header">
               PERSONAL INFORMATION
             </h3>
             <form>
               <label className="labels labels1">Username</label>
               <input
-                type="email"
+                type="text"
                 className="form-control form-control-4 mb-4"
                 placeholder="Your name"
-                onChange={handleName}
-                value={name}
+                value={username}
+                onChange={(e)=>{setUsername(e.target.value)}}
               />
               <label className="labels labels1">Email</label>
               <input
                 type="text"
                 className="form-control form-control-4 mb-4"
                 placeholder="Your email address"
-                onChange={handleEmail}
                 value={email}
+                onChange={(e)=>{setEmail(e.target.value)}}
               />
               <label className="labels labels1">Phone Number</label>
               <input
-                type="number"
+                type="text"
                 className="form-control form-control-4 mb-4"
                 placeholder="Phone"
+                value={number}
+                onChange={(e) => {setNumber(e.target.value)}}
               />
               <label className="labels labels1">Create Password</label>
               <input
-                type="password"
+                type="text"
                 className="form-control form-control-4 mb-4"
                 placeholder="******"
-                onChange={handlePassword}
                 value={password}
+                onChange={(e)=>{setPassword(e.target.value)}}
               />
               <label className="labels labels1">Confirm Password</label>
               <input
-                type="password"
+                type="text"
                 className="form-control form-control-4 mb-4"
                 placeholder="******"
-                onChange={handlePassword}
-                value={password}
+                value={passwordComfirm}
+                onChange={(e)=>{setPasswordComfirm(e.target.value)}}
               />
-              <button onClick={handleSubmit} type="submit" className="btn-block mt-3 signup-btn">
+              <button onClick={handleClick}  className="btn-block mt-3 signup-btn">
                 Sign Up
               </button>
             </form>
@@ -124,3 +111,6 @@ const SignUp = () => {
 };
 
 export default SignUp;
+
+
+// http://3.99.244.37/api/auth/register

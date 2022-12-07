@@ -1,26 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import signup from "../imgs1/signup-img.png";
 
 const ForgottenPassword = () => {
-  const [email, setEmail] = useState("");
-  const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState(false);
 
-  const handleEmail = (e) => {
-    setEmail(e.target.value);
-    console.log(e.target.value);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (email === '') {
-      setError(true);
-    } else {
-      setSubmitted(true);
-      setError(false);
-    }
-    console.log(e.target.value);
-  };
   return (
     <section className="signup-section">
       <div className="container-fluid">
@@ -37,10 +19,9 @@ const ForgottenPassword = () => {
               type="email"
               className="form-control form-control-4 mb-4"
               placeholder="Your email address"
-              onChange={handleEmail}
-              value={email}
+              
             />
-            <button type="submit" onClick={handleSubmit} className="btn-block mt-3 signup-btn">
+            <button type="submit" className="btn-block mt-3 signup-btn">
               Sign In
             </button>
           </div>
