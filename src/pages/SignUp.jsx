@@ -1,6 +1,8 @@
+import axios from "axios";
 import React, {useState} from "react";
 import { icons } from "../components/icon";
 import signup from "../imgs1/signup-img.png";
+
 
 
 const SignUp = () => {
@@ -11,22 +13,19 @@ const SignUp = () => {
   const [passwordComfirm, setPasswordComfirm] = useState('');
 
 
-
-  async function handleClick() {
-    let item = {username,email,number,password,passwordComfirm}
-    console.warn({username,email,number,password,passwordComfirm});
-
-   let result = await fetch('http://3.99.244.37/api/auth/register', {
-      method: 'POST',
-      headers: {
-        "Content-Type": 'application/json',
-        "Accept": 'application/json'
-      },
-       body:JSON.stringify(item),
-    })
-    result = await result.json()
-    console.warn("result", result);
-  }
+const handleClick = () => {
+  axios.post('http://3.99.244.37/api/auth/register', {
+    username: username,
+    email: email,
+    password: password,
+    password_comfirmation: passwordComfirm
+  })
+  .then((response) => {
+    console.log(response);
+  }, (error) => {
+    console.log(error);
+  })
+}
 
 
 
