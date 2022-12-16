@@ -1,8 +1,6 @@
-import axios from "axios";
 import React from "react";
 import { useState } from "react";
 import { FooterSection, QuoteSection } from "../components";
-
 
 const ContactUs = () => {
   const [email, setEmail] = useState("");
@@ -20,21 +18,34 @@ const ContactUs = () => {
     { value: "youtube", media: "Youtube" },
   ];
 
-  const handleSumbit = () => {
-axios.post("http://3.99.244.37/api/auth/contact", {
-  first_name: firstName,
-  last_name: lastName,
-  email: email,
-  company_name: companyName,
-  means_of_contact: contact,
-  message: message
-})
-.then((response) => {
-  console.log(response);
-}, (error) => {
-  console.log(error);
-})
-  };
+
+  const sendHttpRequest = async (method,url,data) => {
+    const response = await fetch(url, {
+      method: method,
+      body: JSON.stringify(data),
+      headers: data ? {
+        accept: "application/json",
+        'Content-Type': 'application/json'
+      } : {}
+    })
+    const responseData = await response.json();
+    console.log(responseData);
+  }
+  
+  
+  const handleSumbit = (e) => {
+    e.preventDefault();
+    sendHttpRequest('POST', 'http://3.99.244.37/api/admin/contact', {
+      email: email,
+      first_name: firstName,
+      last_name: lastName,
+      company_name: companyName,
+      message: message
+    })
+    .then(responseData => {
+      console.log(responseData);
+    })
+  }
 
   return (
     <>
@@ -88,7 +99,7 @@ axios.post("http://3.99.244.37/api/auth/contact", {
                 <div className="col-md-5">
                   <label className="labels">Email</label>
                   <input
-                    type="text"
+                    type="email"
                     name="email"
                     className="form-control form-control-2"
                     value={email}
@@ -123,7 +134,7 @@ axios.post("http://3.99.244.37/api/auth/contact", {
                     onChange={(e) => setMessage(e.target.value)}
                   ></textarea>
                 </div>
-                <input type="submit" className="cont-btn col-md-10 mb-3" />
+                <input type="submit"  className="cont-btn col-md-10 mb-3" />
               </form>
             </div>
           </div>

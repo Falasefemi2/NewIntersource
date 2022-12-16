@@ -7,17 +7,55 @@ const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSignIn =  () => {
-    axios.post("http://3.99.244.37/api/auth/login", {
+  const sendHttpRequest = async (method,url,data) => {
+    const response = await fetch(url, {
+      method: method,
+      body: JSON.stringify(data),
+      headers: data ? {
+        accept: "application/json",
+        'Content-Type': 'application/json'
+      } : {}
+    })
+    const responseData = await response.json();
+    console.log(responseData);
+  }
+  
+  
+  const handleSignIn = (e) => {
+    e.preventDefault();
+    sendHttpRequest('POST', 'http://3.99.244.37/api/auth/login', {
       email_or_username: email,
-      password: password
+     password: password,
     })
-    .then((response) => {
-      console.log(response);
-    }, (error) => {
-      console.log(error);
+    .then(responseData => {
+      console.log(responseData);
     })
-  };
+  }
+
+
+  // const submitRegistration = async () => {
+  //   const requestOptions = {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify({
+  //       email_or_username: email,
+  //       password: password
+  //     }),
+  //   };
+  //   await axios
+  //   .post('http://3.99.244.37/api/auth/login', requestOptions)
+  //   .then((response) => {
+  //     console.log(response);
+  //   })
+  //   .catch((error) => {
+  //     console.log(error.message);
+  //   });
+  // };
+
+  // const handleSignIn = (e) => {
+  //   e.preventDefault();
+  //   submitRegistration();
+  // }
 
   return (
     <section className="signup-section">
@@ -28,10 +66,10 @@ const SignIn = () => {
           </div>
           <div className="col-md-5 mt-3 signup-form">
             <h3 className="text-uppercase signup-header">SIGN IN</h3>
-            <form>
+            <form onSubmit={handleSignIn}>
               <label className="labels labels1">Email</label>
               <input
-                type="text"
+                type="email"
                 className="form-control form-control-4 mb-4"
                 placeholder="Your email address"
                 value={email}
@@ -39,14 +77,14 @@ const SignIn = () => {
               />
               <label className="labels labels1">Password</label>
               <input
-                type="text"
+                type="password"
                 className="form-control form-control-4 mb-4"
                 placeholder="******"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
               <button
-                onSubmit={handleSignIn}
+                type="submit"
                 className="btn-block mt-3 signup-btn"
               >
                 Sign In

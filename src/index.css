@@ -711,7 +711,12 @@ section {
     min-height: 7vh;
 }
 .textarea1,
-    input[type=text] {
+    input[type=text],
+    input[type=email],
+    input[type=password],
+    input[type=file],
+    input[type=number]
+    {
     border: 1px solid #3480F1 !important;
     background-color: #F2F1F5;
 }
@@ -861,7 +866,7 @@ textarea{
     color: #3480F1;
     font-size: 30px;
     font-weight: 600;
-    padding-left: 7rem;
+    padding-left: 7rem !important;
 }
 
 
