@@ -7,55 +7,20 @@ const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const sendHttpRequest = async (method,url,data) => {
-    const response = await fetch(url, {
-      method: method,
-      body: JSON.stringify(data),
-      headers: data ? {
-        accept: "application/json",
-        'Content-Type': 'application/json'
-      } : {}
-    })
-    const responseData = await response.json();
-    console.log(responseData);
-  }
-  
-  
   const handleSignIn = (e) => {
     e.preventDefault();
-    sendHttpRequest('POST', 'http://3.99.244.37/api/auth/login', {
-      email_or_username: email,
-     password: password,
-    })
-    .then(responseData => {
-      console.log(responseData);
-    })
-  }
-
-
-  // const submitRegistration = async () => {
-  //   const requestOptions = {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/json" },
-  //     body: JSON.stringify({
-  //       email_or_username: email,
-  //       password: password
-  //     }),
-  //   };
-  //   await axios
-  //   .post('http://3.99.244.37/api/auth/login', requestOptions)
-  //   .then((response) => {
-  //     console.log(response);
-  //   })
-  //   .catch((error) => {
-  //     console.log(error.message);
-  //   });
-  // };
-
-  // const handleSignIn = (e) => {
-  //   e.preventDefault();
-  //   submitRegistration();
-  // }
+    axios
+      .post("http://3.99.244.37/api/auth/login", {
+        email_or_username: email,
+        password: password,
+      })
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   return (
     <section className="signup-section">
@@ -83,10 +48,7 @@ const SignIn = () => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
-              <button
-                type="submit"
-                className="btn-block mt-3 signup-btn"
-              >
+              <button type="submit" className="btn-block mt-3 signup-btn">
                 Sign In
               </button>
             </form>

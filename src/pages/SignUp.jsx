@@ -10,69 +10,26 @@ const SignUp = () => {
   const [number, setNumber] = useState("");
   const [passwordComfirm, setPasswordComfirm] = useState("");
 
-  const sendHttpRequest = async (method, url, data) => {
-    const response = await fetch(url, {
-      method: method,
-      body: JSON.stringify(data),
-      headers: data
-        ? {
-            accept: "application/json",
-            "Content-Type": "application/json",
-          }
-        : {},
-    });
-    const responseData = await response.json();
-    console.log(responseData);
-  };
-
   const handleClick = (e) => {
     e.preventDefault();
-    if (password === passwordComfirm) {
-      sendHttpRequest();
-    } else {
-      alert('Password does not match')
+    if (password !== passwordComfirm) {
+      alert("Password does not match")
     }
-    sendHttpRequest("POST", "http://3.99.244.37/api/auth/register", {
-      email: email,
-      username: username,
-      password: password,
-      password_confirmation: passwordComfirm,
-      phone: number,
-    }).then((responseData) => {
-      console.log(responseData);
-    });
+    axios
+      .post("http://3.99.244.37/api/auth/register", {
+        email: email,
+        username: username,
+        password: password,
+        password_confirmation: passwordComfirm,
+        phone: number,
+      })
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
-
-  // const submitRegistration = async () => {
-  //   const requestOptions = {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/json" },
-  //     body: JSON.stringify({
-  //       email: email,
-  //       username: username,
-  //       password: password,
-  //       password_confirmation: password,
-  //       phone: number,
-  //     }),
-  //   };
-  //   await axios
-  //     .post("http://3.99.244.37/api/auth/register", requestOptions)
-  //     .then((response) => {
-  //       console.log(response);
-  //     })
-  //     .catch((error) => {
-  //       console.log(error.message);
-  //     });
-  // };
-
-  // const handleClick = (e) => {
-  //   e.preventDefault();
-  //   if (password === passwordComfirm) {
-  //     submitRegistration();
-  //   } else {
-  //     alert("Password does not match");
-  //   }
-  // };
 
   return (
     <section className="signup-section">

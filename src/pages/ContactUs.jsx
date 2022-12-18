@@ -1,3 +1,4 @@
+import axios from "axios";
 import React from "react";
 import { useState } from "react";
 import { FooterSection, QuoteSection } from "../components";
@@ -18,34 +19,23 @@ const ContactUs = () => {
     { value: "youtube", media: "Youtube" },
   ];
 
-
-  const sendHttpRequest = async (method,url,data) => {
-    const response = await fetch(url, {
-      method: method,
-      body: JSON.stringify(data),
-      headers: data ? {
-        accept: "application/json",
-        'Content-Type': 'application/json'
-      } : {}
-    })
-    const responseData = await response.json();
-    console.log(responseData);
-  }
-  
-  
   const handleSumbit = (e) => {
     e.preventDefault();
-    sendHttpRequest('POST', 'http://3.99.244.37/api/admin/contact', {
-      email: email,
-      first_name: firstName,
-      last_name: lastName,
-      company_name: companyName,
-      message: message
-    })
-    .then(responseData => {
-      console.log(responseData);
-    })
-  }
+    axios
+      .post("http://3.99.244.37/api/admin/contact", {
+        email: email,
+        first_name: firstName,
+        last_name: lastName,
+        company_name: companyName,
+        message: message,
+      })
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   return (
     <>
@@ -134,7 +124,7 @@ const ContactUs = () => {
                     onChange={(e) => setMessage(e.target.value)}
                   ></textarea>
                 </div>
-                <input type="submit"  className="cont-btn col-md-10 mb-3" />
+                <input type="submit" className="cont-btn col-md-10 mb-3" />
               </form>
             </div>
           </div>

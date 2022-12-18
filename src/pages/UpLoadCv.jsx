@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { QuoteSection, FooterSection } from "../components";
 import axios from "axios";
+import { useEffect } from "react";
 
 const UpLoadCv = () => {
   const [firstName, setFirstName] = useState("");
@@ -16,11 +17,22 @@ const UpLoadCv = () => {
   const [relocate, setRelocate] = useState("");
   const [incanada, setInCanada] = useState("");
 
+  useEffect(() => {
+    const contryUrl = "http://3.99.244.37/api/auth/country";
+    axios.get(contryUrl, {
+      country_id: country,
+      state_id: state
+    })
+    .then((response) => {
+      // console.log(response.data);
+      setCountry(response.data);
+         setState(response.data)
+      });
+  }, [country,state])
+
   const handleChange = (e) => {
     setPassport(e.target.files[0]);
     setUploadCv(e.target.files[0]);
-    // console.log(passport);
-    // console.log(uploadcv);
   };
 
   const handleSubmit = (e) => {
@@ -36,6 +48,9 @@ const UpLoadCv = () => {
     formData.append("desired_salary", salary);
     formData.append("to_relocate", relocate);
     formData.append("currently_in_canada", incanada);
+    formData.append("country_id", country);
+    formData.append("state_id", state);
+    formData.append("job_title_id", job)
     const config = {
       headers: {
         "content-type": "multipart/form-data",
@@ -46,30 +61,9 @@ const UpLoadCv = () => {
     });
   };
 
-  // const sendHttpRequest = () => {
-  //   axios({
-  //     method: "get",
-  //     url: "http://3.99.244.37/api/auth/job-application",
-  //     params: {
-  //       first_name: firstName,
-  //       last_name: lastName,
-  //       email: email,
-  //       phone_number: number,
-  //       country_id: country,
-  //       state_id: state,
-  //       job_title_id: job,
-  //       passport_id: passport,
-  //       upload_cv: uploadcv,
-  //       desired_salary: salary,
-  //       to_relocate: relocate,
-  //       currently_in_canada: incanada,
-  //     },
-  //   }).then((response) => {
-  //     console.log(response.data);
-  //   });
-  // };
-  // sendHttpRequest();
-
+  const { data } = country;
+  // console.log(data);
+  
   return (
     <>
       <section className="contacts">
@@ -116,11 +110,26 @@ const UpLoadCv = () => {
                 </div>
                 <div className="col-md-5">
                   <label className="labels">Country</label>
-                  <input type="text" className="form-control form-control-1" />
+                  <select onChange={(e) => setCountry(e.target.value)}>
+                    {data?.map((item) => {
+                      return <option key={item.id} value={item.name}>{item.name}</option>
+                    })}
+                  </select>
                 </div>
                 <div className="col-md-5">
                   <label className="labels">State/Province</label>
-                  <input type="text" className="form-control form-control-2" />
+                  <select >
+                    {data?.map((item) => {
+                      const {name,state} = item
+                    
+                        return state.map((states) => {
+                          return <option key={states.id} value={states.name}>{states.name}</option>
+                        })
+                      
+
+                      
+                    })}
+                  </select>
                 </div>
                 <div className="col-md-5">
                   <label className="text-dark ">Willing to relocate</label>
@@ -201,18 +210,3 @@ const UpLoadCv = () => {
 };
 
 export default UpLoadCv;
-
-// first_name: firstName,
-//       last_name: lastName,
-//       email: email,
-//       phone_number: number,
-//       country_id: country,
-//       state_id: state,
-//       job_title_id: job,
-//       passport_id: passport,
-//       upload_cv: uploadcv,
-//       desired_salary: salary,
-//       to_relocate: relocate,
-//       currently_in_canada: incanada,
-
-// "http://3.99.244.37/api/auth/job-application"
