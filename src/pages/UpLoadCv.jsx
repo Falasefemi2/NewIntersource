@@ -19,12 +19,9 @@ const UpLoadCv = () => {
 
   useEffect(() => {
     const contryUrl = "http://3.99.244.37/api/auth/country";
-    axios.get(contryUrl, {
-      country_id: country,
-      state_id: state
-    })
+    axios.get(contryUrl)
     .then((response) => {
-      // console.log(response.data);
+      console.log(response.data);
       setCountry(response.data);
          setState(response.data)
       });
@@ -110,7 +107,7 @@ const UpLoadCv = () => {
                 </div>
                 <div className="col-md-5">
                   <label className="labels">Country</label>
-                  <select onChange={(e) => setCountry(e.target.value)}>
+                  <select>
                     {data?.map((item) => {
                       return <option key={item.id} value={item.name}>{item.name}</option>
                     })}
@@ -118,16 +115,12 @@ const UpLoadCv = () => {
                 </div>
                 <div className="col-md-5">
                   <label className="labels">State/Province</label>
-                  <select >
+                  <select>
                     {data?.map((item) => {
                       const {name,state} = item
-                    
                         return state.map((states) => {
                           return <option key={states.id} value={states.name}>{states.name}</option>
                         })
-                      
-
-                      
                     })}
                   </select>
                 </div>
